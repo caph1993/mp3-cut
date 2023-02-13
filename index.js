@@ -222,7 +222,8 @@ const mainContent = (() => {
     const cutBlob = await new Promise(resolve => {
       //@ts-ignore
       let cutter = new mp3cutter();
-      cutter.cut(blob, start, end, resolve);
+      let bitrate = 128;
+      cutter.cut(blob, start, end, resolve, bitrate);
     })
     //@ts-ignore
     const mp3tag = new MP3Tag(await blob.arrayBuffer());
