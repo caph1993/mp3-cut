@@ -244,9 +244,10 @@ const mainContent = (() => {
   async function devSimulateFileDrop() {
     await sleep(100);
     put(fileDropArea, '.hidden');
-    const exampleFileName = 'Dueto de antaño - Las acacias.mp3';
-    const blob = await (await fetch(new Request(exampleFileName))).blob();
-    waveSurferLoad(blob, exampleFileName);
+    const filename = 'Dueto de antaño - Las acacias.mp3';
+    const req = new Request(`./examples/${filename}`);
+    const blob = await (await fetch(req)).blob();
+    waveSurferLoad(blob, filename);
   }
 
   const _waveSurfer = (async () => {
