@@ -86,7 +86,7 @@ button{
 `));
 const mainContent = (() => {
   const fileInput = put('input[type="file"]');
-  const exampleInput = put('p $ a[href="javascript:void"] $ < $', 'Or load ', 'this example', '.');
+  const exampleInput = put('p $ a[href="javascript:void(0)"] $ < $', 'Or load ', 'this example', '.');
   exampleInput.onclick = ()=>{
     devSimulateFileDrop();
   }
