@@ -95,7 +95,7 @@ const mainContent = (() => {
       putStyle({marginTop: '2em'}),
       fileInput,
       putStyle({marginTop: '7em'}),
-      exampleInput,
+      //exampleInput,
     ]),
   ])
   fileDropArea.ondragover = (ev) => {
